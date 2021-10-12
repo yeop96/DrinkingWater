@@ -27,7 +27,7 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="물마시기">
+                                        <buttonConfiguration key="configuration" style="plain" title="물 마시기">
                                             <backgroundConfiguration key="background">
                                                 <color key="backgroundColor" red="0.75679403540000001" green="0.88130825759999998" blue="0.96488052609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </backgroundConfiguration>
@@ -49,20 +49,20 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="UTh-rH-3Wg">
                                 <rect key="frame" x="40" y="138" width="113.5" height="104"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ml" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DS2-AZ-e5n">
+                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6G-5i-9n0">
-                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="48"/>
+                                        <rect key="frame" x="0.0" y="38" width="113.5" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="2cr-yv-c7Z"/>
                                         </constraints>
                                         <string key="text">잘하셨어요!
 오늘 마신 양은</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ml" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DS2-AZ-e5n">
-                                        <rect key="frame" x="0.0" y="50" width="52.5" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -82,18 +82,22 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="HwK-vx-DcB"/>
                                             <constraint firstAttribute="width" constant="250" id="JB7-Ax-rrt"/>
+                                            <constraint firstAttribute="width" secondItem="DWY-QD-96V" secondAttribute="height" multiplier="1:1" id="mRS-OZ-rVF"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="sjk-RP-BRc">
-                                        <rect key="frame" x="86" y="258" width="78.5" height="34"/>
+                                        <rect key="frame" x="70.5" y="258" width="109" height="34"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CJM-5h-BU5">
-                                                <rect key="frame" x="0.0" y="0.0" width="50.5" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="000" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CJM-5h-BU5">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="OAF-EH-f4w"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ml" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXl-tA-hfj">
-                                                <rect key="frame" x="50.5" y="0.0" width="28" height="34"/>
+                                                <rect key="frame" x="70" y="0.0" width="39" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -101,6 +105,9 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="sjk-RP-BRc" firstAttribute="centerX" secondItem="Bnn-bz-GF5" secondAttribute="centerX" id="2rj-gx-bIX"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로필을 설정해주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kr-OP-RMa">
                                 <rect key="frame" x="144.5" y="789" width="125" height="17"/>
@@ -182,7 +189,7 @@
                                             <constraint firstAttribute="height" constant="50" id="KPz-ya-rdk"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -204,7 +211,7 @@
                                             <constraint firstAttribute="height" constant="50" id="sMF-NH-dDS"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -226,7 +233,7 @@
                                             <constraint firstAttribute="height" constant="50" id="qON-fc-Wpu"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -316,6 +323,17 @@
             <point key="canvasLocation" x="-23.188405797101453" y="77.678571428571431"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="dnA-ep-hpM">
+            <size key="intrinsicContentSize" width="182.5" height="32.5"/>
+        </designable>
+        <designable name="gfn-hH-ieT">
+            <size key="intrinsicContentSize" width="184" height="32.5"/>
+        </designable>
+        <designable name="vdx-4P-HHx">
+            <size key="intrinsicContentSize" width="226" height="33.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="1-1" width="152" height="151"/>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
