@@ -17,6 +17,7 @@ class DrinkingWaterViewController: UIViewController{
     @IBOutlet weak var profileInformLabel: UILabel!
     @IBOutlet weak var waterInputButton: UIButton!
     var accumWaterml: Int = 0
+    var percent: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +26,21 @@ class DrinkingWaterViewController: UIViewController{
             profileInformLabel.text = "\(nickName)님의 하루 물 권장 섭취량은  \(UserDefaults.standard.double(forKey: "userRecommended"))L 입니다."
         }
         accumWaterLabel.text = "\(UserDefaults.standard.integer(forKey: "accumWater"))ml"
-
+        
+        percent = Int(Double(Double(UserDefaults.standard.integer(forKey: "accumWater")) / Double(UserDefaults.standard.double(forKey: "userRecommended") * 1000)) * 100)
+        userImage(percent)
+        goalWaterLabel.text = "목표의? \(percent)%"
+        
+        if percent >= 100{
+            informLabel.text = "권장 섭취량을 넘었어요!\n오늘 마신 양은"
+            informLabel.textColor = .blue
+        }
+        else{
+            informLabel.textColor = .white
+        }
     }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(true)
             
@@ -50,6 +64,8 @@ class DrinkingWaterViewController: UIViewController{
         plantImage.image = UIImage(named: "1-1")
         UserDefaults.standard.set(1, forKey: "imageGrade")
         UserDefaults.standard.set(0, forKey: "accumWater")
+        informLabel.text = "잘하셨어요!\n오늘 마신 양은"
+        informLabel.textColor = .white
     }
     
     @IBAction func tabGestureClicked(_ sender: UITapGestureRecognizer) {
@@ -57,29 +73,27 @@ class DrinkingWaterViewController: UIViewController{
         view.endEditing(true)
     }
     
-    func userImage(_ goal: Double) {
-      let goalNumber = floor(goal / 10)
-      
-      UserDefaults.standard.set(goalNumber, forKey: "goalNumber")
+    func userImage(_ goal: Int) {
+      UserDefaults.standard.set(goal, forKey: "goal")
         
-      switch goalNumber {
-      case 1:
+      switch goal {
+      case 0...19:
         plantImage.image = UIImage(named: "1-1")
-      case 2:
+      case 20...29:
           plantImage.image = UIImage(named: "1-2")
-      case 3:
+      case 30...39:
           plantImage.image = UIImage(named: "1-3")
-      case 4:
+      case 40...49:
           plantImage.image = UIImage(named: "1-4")
-      case 5:
+      case 50...59:
           plantImage.image = UIImage(named: "1-5")
-      case 6:
+      case 60...69:
           plantImage.image = UIImage(named: "1-6")
-      case 7:
+      case 70...79:
           plantImage.image = UIImage(named: "1-7")
-      case 8:
+      case 80...89:
           plantImage.image = UIImage(named: "1-8")
-      case 9:
+      case 90...:
           plantImage.image = UIImage(named: "1-9")
       default:
           plantImage.image = UIImage(named: "1-1")
