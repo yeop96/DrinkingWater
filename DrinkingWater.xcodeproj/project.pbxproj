@@ -13,6 +13,10 @@
 		27F03A4827149EFA00B505C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F03A4627149EFA00B505C4 /* Main.storyboard */; };
 		27F03A4A27149EFE00B505C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27F03A4927149EFE00B505C4 /* Assets.xcassets */; };
 		27F03A4D27149EFE00B505C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F03A4B27149EFE00B505C4 /* LaunchScreen.storyboard */; };
+		27F03A5527149FC800B505C4 /* DrinkingWaterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F03A5427149FC800B505C4 /* DrinkingWaterViewController.swift */; };
+		27F03A5727149FD600B505C4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F03A5627149FD600B505C4 /* ProfileViewController.swift */; };
+		27F03A5A2714C3B900B505C4 /* TextFieldEffects in Frameworks */ = {isa = PBXBuildFile; productRef = 27F03A592714C3B900B505C4 /* TextFieldEffects */; };
+		27F03A5C2714C99500B505C4 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F03A5B2714C99400B505C4 /* UserInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		27F03A4927149EFE00B505C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27F03A4C27149EFE00B505C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27F03A4E27149EFE00B505C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27F03A5427149FC800B505C4 /* DrinkingWaterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkingWaterViewController.swift; sourceTree = "<group>"; };
+		27F03A5627149FD600B505C4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		27F03A5B2714C99400B505C4 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F03A5A2714C3B900B505C4 /* TextFieldEffects in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,10 +67,13 @@
 				27F03A4027149EFA00B505C4 /* AppDelegate.swift */,
 				27F03A4227149EFA00B505C4 /* SceneDelegate.swift */,
 				27F03A4427149EFA00B505C4 /* ViewController.swift */,
+				27F03A5B2714C99400B505C4 /* UserInformation.swift */,
 				27F03A4627149EFA00B505C4 /* Main.storyboard */,
 				27F03A4927149EFE00B505C4 /* Assets.xcassets */,
 				27F03A4B27149EFE00B505C4 /* LaunchScreen.storyboard */,
 				27F03A4E27149EFE00B505C4 /* Info.plist */,
+				27F03A5427149FC800B505C4 /* DrinkingWaterViewController.swift */,
+				27F03A5627149FD600B505C4 /* ProfileViewController.swift */,
 			);
 			path = DrinkingWater;
 			sourceTree = "<group>";
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = DrinkingWater;
+			packageProductDependencies = (
+				27F03A592714C3B900B505C4 /* TextFieldEffects */,
+			);
 			productName = DrinkingWater;
 			productReference = 27F03A3D27149EFA00B505C4 /* DrinkingWater.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 27F03A3427149EFA00B505C4;
+			packageReferences = (
+				27F03A582714C3B900B505C4 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+			);
 			productRefGroup = 27F03A3E27149EFA00B505C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F03A5527149FC800B505C4 /* DrinkingWaterViewController.swift in Sources */,
+				27F03A5C2714C99500B505C4 /* UserInformation.swift in Sources */,
 				27F03A4527149EFA00B505C4 /* ViewController.swift in Sources */,
+				27F03A5727149FD600B505C4 /* ProfileViewController.swift in Sources */,
 				27F03A4127149EFA00B505C4 /* AppDelegate.swift in Sources */,
 				27F03A4327149EFA00B505C4 /* SceneDelegate.swift in Sources */,
 			);
@@ -295,8 +315,11 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,8 +346,11 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		27F03A582714C3B900B505C4 /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		27F03A592714C3B900B505C4 /* TextFieldEffects */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27F03A582714C3B900B505C4 /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
+			productName = TextFieldEffects;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 27F03A3527149EFA00B505C4 /* Project object */;
 }
