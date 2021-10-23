@@ -17,8 +17,8 @@ class DrinkingWaterViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var waterInputTextField: UITextField!
     @IBOutlet weak var profileInformLabel: UILabel!
     @IBOutlet weak var waterInputButton: UIButton!
-    var accumWaterml: Int = 0
-    var percent: Int = 0
+    var accumWaterml = 0
+    var percent = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()

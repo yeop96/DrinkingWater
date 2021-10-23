@@ -83,10 +83,12 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         UserDefaults.standard.set(userHeightTextField.text, forKey: "userHeight")
         UserDefaults.standard.set(userWeightTextField.text, forKey: "userWeight")
         
-        let h = userHeightTextField.text!
-        let w = userWeightTextField.text!
-        let recommended = (Double(h)! + Double(w)!) / 100
-        UserDefaults.standard.set(recommended, forKey: "userRecommended")
+        if let h = userHeightTextField.text, let w = userWeightTextField.text{
+            if let hd = Double(h), let wd = Double(w){
+                let recommended = (hd + wd) / 100
+                UserDefaults.standard.set(recommended, forKey: "userRecommended")
+            }
+        }
         
         UserDefaults.standard.set(0, forKey: "accumWater")
         
