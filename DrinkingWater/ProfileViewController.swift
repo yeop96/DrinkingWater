@@ -7,8 +7,9 @@
 
 import UIKit
 import TextFieldEffects
+import Toast
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nickNameTextField: HoshiTextField!
     @IBOutlet weak var userHeightTextField: HoshiTextField!
@@ -18,6 +19,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nickNameTextField.delegate = self
         
         if let nickName = UserDefaults.standard.string(forKey: "nickName"){
             nickNameTextField.text = nickName
@@ -32,15 +34,50 @@ class ProfileViewController: UIViewController {
 
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else { return true }
+        let newLength = text.count + string.count - range.length
+        return newLength <= 4 // 숫자제한
+    }
+    
     
     @IBAction func saveButtonClicked(_ sender: UIBarButtonItem) {
-        if nickNameTextField.text == "" || userHeightTextField.text == "" || userWeightTextField.text == "" {
-            let alert = UIAlertController(title: "입력", message: "비어있는 입력을 채워주세요!", preferredStyle: UIAlertController.Style.alert)
-            let okAction = UIAlertAction(title: "닫기", style: .default) { (action) in}
-            alert.addAction(okAction)
-            present(alert, animated: false, completion: nil)
+        if nickNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || userHeightTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || userWeightTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            
+            let windows = UIApplication.shared.windows
+            windows.last?.makeToast("모든 정보를 입력해주세요.", duration: 3.0, position: .bottom)
+            
             return
         }
+        else if nickNameTextField.text!.contains(" ") || userHeightTextField.text!.contains(" ") || userWeightTextField.text!.contains(" "){
+            let windows = UIApplication.shared.windows
+            windows.last?.makeToast("띄어 쓰기 없게 해주세요.", duration: 3.0, position: .bottom)
+
+            return
+        }
+        else if userHeightTextField.text?.first == "0" || userWeightTextField.text?.first == "0"{
+            let windows = UIApplication.shared.windows
+            windows.last?.makeToast("숫자 앞에 0을 빼주세요!", duration: 3.0, position: .bottom)
+
+            return
+        }
+        else{
+            let pattern = "^[0-9]{1,3}$"
+            let regex = try? NSRegularExpression(pattern: pattern)
+            guard let _ = regex?.firstMatch(in: userHeightTextField.text!, options: [], range: NSRange(location: 0, length: userHeightTextField.text!.count)) else{
+                let windows = UIApplication.shared.windows
+                windows.last?.makeToast("키는 숫자 및 세자리까지 가능합니다.", duration: 3.0, position: .bottom)
+                return
+            }
+            guard let _ = regex?.firstMatch(in: userWeightTextField.text!, options: [], range: NSRange(location: 0, length: userWeightTextField.text!.count)) else{
+                let windows = UIApplication.shared.windows
+                windows.last?.makeToast("몸무게는 숫자 및 세자리까지 가능합니다.", duration: 3.0, position: .bottom)
+                return
+            }
+            
+
+        }
+        
         
         UserDefaults.standard.set(nickNameTextField.text, forKey: "nickName")
         UserDefaults.standard.set(userHeightTextField.text, forKey: "userHeight")
@@ -53,9 +90,7 @@ class ProfileViewController: UIViewController {
         
         UserDefaults.standard.set(0, forKey: "accumWater")
         
-        navigationController?.viewDidLoad()
         navigationController?.popViewController(animated: true) //뒤로가기
-        
     }
     
     @IBAction func tabGestureCliked(_ sender: UITapGestureRecognizer) {

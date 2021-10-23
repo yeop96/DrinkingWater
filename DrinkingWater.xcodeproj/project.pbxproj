@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		273D8B50271AF1A500FB54E4 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273D8B4F271AF1A500FB54E4 /* OnBoarding.storyboard */; };
+		27C5D58B2718436400D79967 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 27C5D58A2718436400D79967 /* Toast */; };
 		27F03A4127149EFA00B505C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F03A4027149EFA00B505C4 /* AppDelegate.swift */; };
 		27F03A4327149EFA00B505C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F03A4227149EFA00B505C4 /* SceneDelegate.swift */; };
 		27F03A4527149EFA00B505C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F03A4427149EFA00B505C4 /* ViewController.swift */; };
@@ -20,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		273D8B4F271AF1A500FB54E4 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		27F03A3D27149EFA00B505C4 /* DrinkingWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkingWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F03A4027149EFA00B505C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27F03A4227149EFA00B505C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C5D58B2718436400D79967 /* Toast in Frameworks */,
 				27F03A5A2714C3B900B505C4 /* TextFieldEffects in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +73,7 @@
 				27F03A4427149EFA00B505C4 /* ViewController.swift */,
 				27F03A5B2714C99400B505C4 /* UserInformation.swift */,
 				27F03A4627149EFA00B505C4 /* Main.storyboard */,
+				273D8B4F271AF1A500FB54E4 /* OnBoarding.storyboard */,
 				27F03A4927149EFE00B505C4 /* Assets.xcassets */,
 				27F03A4B27149EFE00B505C4 /* LaunchScreen.storyboard */,
 				27F03A4E27149EFE00B505C4 /* Info.plist */,
@@ -96,6 +101,7 @@
 			name = DrinkingWater;
 			packageProductDependencies = (
 				27F03A592714C3B900B505C4 /* TextFieldEffects */,
+				27C5D58A2718436400D79967 /* Toast */,
 			);
 			productName = DrinkingWater;
 			productReference = 27F03A3D27149EFA00B505C4 /* DrinkingWater.app */;
@@ -127,6 +133,7 @@
 			mainGroup = 27F03A3427149EFA00B505C4;
 			packageReferences = (
 				27F03A582714C3B900B505C4 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
+				27C5D5892718436400D79967 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = 27F03A3E27149EFA00B505C4 /* Products */;
 			projectDirPath = "";
@@ -145,6 +152,7 @@
 				27F03A4D27149EFE00B505C4 /* LaunchScreen.storyboard in Resources */,
 				27F03A4A27149EFE00B505C4 /* Assets.xcassets in Resources */,
 				27F03A4827149EFA00B505C4 /* Main.storyboard in Resources */,
+				273D8B50271AF1A500FB54E4 /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +398,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		27C5D5892718436400D79967 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		27F03A582714C3B900B505C4 /* XCRemoteSwiftPackageReference "TextFieldEffects" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/raulriera/TextFieldEffects.git";
@@ -401,6 +417,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		27C5D58A2718436400D79967 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27C5D5892718436400D79967 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
 		27F03A592714C3B900B505C4 /* TextFieldEffects */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 27F03A582714C3B900B505C4 /* XCRemoteSwiftPackageReference "TextFieldEffects" */;
