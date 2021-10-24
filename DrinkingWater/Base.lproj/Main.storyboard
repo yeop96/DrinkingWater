@@ -11,7 +11,7 @@
         <!--물 마시기-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DrinkingWaterViewController" customModule="DrinkingWater" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DrinkingWaterViewController" id="BYZ-38-t0r" customClass="DrinkingWaterViewController" customModule="DrinkingWater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,7 +171,7 @@
         <!--Profile View Controller-->
         <scene sceneID="KP4-5d-FDQ">
             <objects>
-                <viewController id="uBa-ey-KjB" customClass="ProfileViewController" customModule="DrinkingWater" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="uBa-ey-KjB" customClass="ProfileViewController" customModule="DrinkingWater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WVn-az-SBf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -299,7 +299,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gXK-Ia-y3Y">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Yk-10-i4R" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Main" automaticallyAdjustsScrollViewInsets="NO" id="9Yk-10-i4R" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YSl-Sy-rgB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

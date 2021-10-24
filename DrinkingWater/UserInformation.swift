@@ -17,4 +17,14 @@ struct UserInformation: Codable {
         var recommendIntake: Float { return Float(height + weight)/100.0 }
         var percentGoal: Int { return Int(Float(accumulateWater) / (recommendIntake * 1000.0) * 100.0) }
     }
+    
+    static func isFirstTime() -> Bool {
+            let defaults = UserDefaults.standard
+            if defaults.object(forKey: "isFirstTime") == nil {
+                //defaults.set("No", forKey:"isFirstTime")
+                return true
+            } else {
+                return false
+            }
+    }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		273D8B50271AF1A500FB54E4 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273D8B4F271AF1A500FB54E4 /* OnBoarding.storyboard */; };
 		279713782724123800B2C659 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 279713772724123800B2C659 /* IQKeyboardManagerSwift */; };
+		2797137A27254AE600B2C659 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2797137927254AE600B2C659 /* OnBoardingViewController.swift */; };
 		27C5D58B2718436400D79967 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 27C5D58A2718436400D79967 /* Toast */; };
 		27F03A4127149EFA00B505C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F03A4027149EFA00B505C4 /* AppDelegate.swift */; };
 		27F03A4327149EFA00B505C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F03A4227149EFA00B505C4 /* SceneDelegate.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		273D8B4F271AF1A500FB54E4 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
+		2797137927254AE600B2C659 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		27F03A3D27149EFA00B505C4 /* DrinkingWater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkingWater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F03A4027149EFA00B505C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27F03A4227149EFA00B505C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,13 +76,14 @@
 				27F03A4227149EFA00B505C4 /* SceneDelegate.swift */,
 				27F03A4427149EFA00B505C4 /* ViewController.swift */,
 				27F03A5B2714C99400B505C4 /* UserInformation.swift */,
+				27F03A5427149FC800B505C4 /* DrinkingWaterViewController.swift */,
+				27F03A5627149FD600B505C4 /* ProfileViewController.swift */,
 				27F03A4627149EFA00B505C4 /* Main.storyboard */,
 				273D8B4F271AF1A500FB54E4 /* OnBoarding.storyboard */,
+				2797137927254AE600B2C659 /* OnBoardingViewController.swift */,
 				27F03A4927149EFE00B505C4 /* Assets.xcassets */,
 				27F03A4B27149EFE00B505C4 /* LaunchScreen.storyboard */,
 				27F03A4E27149EFE00B505C4 /* Info.plist */,
-				27F03A5427149FC800B505C4 /* DrinkingWaterViewController.swift */,
-				27F03A5627149FD600B505C4 /* ProfileViewController.swift */,
 			);
 			path = DrinkingWater;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			files = (
 				27F03A5527149FC800B505C4 /* DrinkingWaterViewController.swift in Sources */,
 				27F03A5C2714C99500B505C4 /* UserInformation.swift in Sources */,
+				2797137A27254AE600B2C659 /* OnBoardingViewController.swift in Sources */,
 				27F03A4527149EFA00B505C4 /* ViewController.swift in Sources */,
 				27F03A5727149FD600B505C4 /* ProfileViewController.swift in Sources */,
 				27F03A4127149EFA00B505C4 /* AppDelegate.swift in Sources */,

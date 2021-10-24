@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -8,40 +8,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--On Boarding View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnBoardingViewController" id="Y6W-OH-hqX" customClass="OnBoardingViewController" customModule="DrinkingWater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1-9" translatesAutoresizingMaskIntoConstraints="NO" id="0Sp-AJ-Utm">
-                                <rect key="frame" x="87" y="183" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1-9" translatesAutoresizingMaskIntoConstraints="NO" id="0Sp-AJ-Utm">
+                                <rect key="frame" x="131" y="180" width="152" height="151"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V19-hW-xs4">
-                                <rect key="frame" x="186" y="98" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOS-cx-wos">
-                                <rect key="frame" x="174" y="786" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOS-cx-wos">
+                                <rect key="frame" x="168.5" y="781" width="77" height="51"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="시작하기!"/>
+                                <connections>
+                                    <action selector="startButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HzS-2c-vrr"/>
+                                </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="aco-fa-Wuw">
-                                <rect key="frame" x="94" y="387" width="226" height="250"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="aco-fa-Wuw">
+                                <rect key="frame" x="70" y="381" width="274" height="250"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="닉네임을 설정해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0xp-jN-3um" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                        <rect key="frame" x="0.0" y="0.0" width="182.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="50"/>
                                         <color key="backgroundColor" red="0.53736269469999998" green="0.89153605700000005" blue="0.59341943259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" red="0.53736269469999998" green="0.89153605700000005" blue="0.59341943259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="x7f-2m-oR0"/>
+                                            <constraint firstAttribute="height" constant="50" id="Ald-v1-fpp"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -59,11 +53,11 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="키(cm)를 설정해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xr2-4C-903" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                        <rect key="frame" x="0.0" y="100" width="184" height="50"/>
+                                        <rect key="frame" x="0.0" y="100" width="274" height="50"/>
                                         <color key="backgroundColor" red="0.53736269469999998" green="0.89153605700000005" blue="0.59341943259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" red="0.53736269469999998" green="0.89153605700000005" blue="0.59341943259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="FaZ-DF-5rc"/>
+                                            <constraint firstAttribute="height" constant="50" id="Xau-FL-4PP"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -81,11 +75,11 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="몸무게(kg)를 설정해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SID-7j-cvI" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                        <rect key="frame" x="0.0" y="200" width="226" height="50"/>
+                                        <rect key="frame" x="0.0" y="200" width="274" height="50"/>
                                         <color key="backgroundColor" red="0.53736269469999998" green="0.89153605700000005" blue="0.59341943259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" red="0.53736269469999998" green="0.89153605700000005" blue="0.59341943259999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="YDx-gI-u2d"/>
+                                            <constraint firstAttribute="height" constant="50" id="wBX-OT-KF0"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -103,15 +97,64 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="0xp-jN-3um" firstAttribute="leading" secondItem="aco-fa-Wuw" secondAttribute="leading" id="3TN-Jp-ArP"/>
+                                    <constraint firstItem="SID-7j-cvI" firstAttribute="leading" secondItem="aco-fa-Wuw" secondAttribute="leading" id="JCH-pK-8at"/>
+                                    <constraint firstAttribute="trailing" secondItem="SID-7j-cvI" secondAttribute="trailing" id="Sxp-aY-DF6"/>
+                                    <constraint firstAttribute="trailing" secondItem="0xp-jN-3um" secondAttribute="trailing" id="b59-4v-t05"/>
+                                    <constraint firstItem="Xr2-4C-903" firstAttribute="leading" secondItem="aco-fa-Wuw" secondAttribute="leading" id="j6i-7J-hTW"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xr2-4C-903" secondAttribute="trailing" id="vw9-7f-Yhd"/>
+                                </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물 적정량을 위해 프로필을 작성 해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iin-WS-K04">
+                                <rect key="frame" x="68.5" y="104.5" width="277" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="처음 오셨군요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V19-hW-xs4">
+                                <rect key="frame" x="158.5" y="64" width="97.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.75679403540000001" green="0.88130825759999998" blue="0.96488052609999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="aco-fa-Wuw" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="AD9-jg-O2s"/>
+                            <constraint firstItem="xOS-cx-wos" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Cu0-la-Fq9"/>
+                            <constraint firstItem="aco-fa-Wuw" firstAttribute="top" secondItem="0Sp-AJ-Utm" secondAttribute="bottom" constant="50" id="HdQ-5t-ADw"/>
+                            <constraint firstItem="0Sp-AJ-Utm" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="I4c-ta-rwY"/>
+                            <constraint firstItem="iin-WS-K04" firstAttribute="top" secondItem="V19-hW-xs4" secondAttribute="bottom" constant="20" id="a64-0L-dTV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aco-fa-Wuw" secondAttribute="trailing" constant="70" id="asA-5p-FKk"/>
+                            <constraint firstItem="xOS-cx-wos" firstAttribute="top" secondItem="aco-fa-Wuw" secondAttribute="bottom" constant="150" id="f8k-tV-eRE"/>
+                            <constraint firstItem="V19-hW-xs4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fm7-6i-yC5"/>
+                            <constraint firstItem="0Sp-AJ-Utm" firstAttribute="top" secondItem="iin-WS-K04" secondAttribute="bottom" constant="55" id="hbm-Vp-P1j"/>
+                            <constraint firstItem="iin-WS-K04" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="jNX-z9-Dbd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="xOS-cx-wos" secondAttribute="bottom" constant="30" id="lWe-RJ-dEU"/>
+                            <constraint firstItem="aco-fa-Wuw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="ppe-7W-CmR"/>
+                            <constraint firstItem="V19-hW-xs4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="uzl-lW-MFP"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Za4-SU-wbK" appends="YES" id="qXg-7O-ngW"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="heightTextField" destination="Xr2-4C-903" id="Yxu-cq-daD"/>
+                        <outlet property="nickNameTextField" destination="0xp-jN-3um" id="L9g-bl-34k"/>
+                        <outlet property="weightTextField" destination="SID-7j-cvI" id="Pfu-zD-9jt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Za4-SU-wbK">
+                    <connections>
+                        <action selector="tabGestureClicked:" destination="Y6W-OH-hqX" id="81w-64-RcK"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="71" y="58"/>
+            <point key="canvasLocation" x="69.565217391304358" y="57.589285714285708"/>
         </scene>
     </scenes>
     <designables>
